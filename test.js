@@ -43,17 +43,18 @@ function addTax(price, func) {
   //funcは実行する関数名
   //税込み価格を計算して四捨五入して整数にしている(スコープ内でしか参照できません。)
   const taxPrice = Math.round(price * 1.10);
-  console.log(taxPrice);
 }
 
 //トマトの税込み価格をコンソールに表示させる処理
-function func(price){
-  price();
+function tomato(taxPrice){
+  taxPrice();
+  console.log( "トマトの値段は" + price + "円です。");
 }
-addTax(80, func);
+addTax(80, tomato);
 
 //玉ねぎの税込み価格をコンソールに表示させる処理
-function func(price){
-  price();
+function onion(taxPrice){
+  taxPrice();
+  console.log( "玉ねぎの値段は" + price + "円です。");
 }
-addTax(120, func);
+addTax(120, onion);
