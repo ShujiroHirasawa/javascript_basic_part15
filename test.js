@@ -43,16 +43,18 @@ function addTax(price, func) {
   func(taxPrice, price);
 }
 
-//トマトの税込み価格をコンソールに表示させる処理
-function tomato(price, taxPrice){
-  const name = "トマト";
+function x(name){
   console.log(name + "の値段は" + price + "円です。");
 }
-addTax(80, tomato);
+
+//トマトの税込み価格をコンソールに表示させる処理
+function y(tomato, taxPrice){
+  const name ="トマト";
+}
+addTax(80,x);
 
 //玉ねぎの税込み価格をコンソールに表示させる処理
-function onion(price, taxPrice){
-  const name = "玉ねぎ";
-  console.log(name + "の値段は" + price + "円です。");
+function z(onion, taxPrice){
+  const name ="玉ねぎ";
 }
-addTax(130, onion);
+addTax(150,x);
