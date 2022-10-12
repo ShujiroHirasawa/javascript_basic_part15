@@ -40,23 +40,22 @@ fruit("リンゴ", 100);
 //3
 function addTax(price, func) {
   const taxPrice = Math.round(price * 1.10);
-  func(taxPrice,price);
+  func(price,taxPrice);
 }
 
-function price(price,name){
+function price(name,price){
   console.log(name + "の値段は" + price + "円です。");
 }
 
 //トマトの税込み価格をコンソールに表示させる処理
 function tomato(price,taxPrice){
   const name ="トマト";
-  taxPrice(price,name);
 }
-tomato(80,price);
 
 //玉ねぎの税込み価格をコンソールに表示させる処理
 function onion(price, taxPrice){
   const name ="玉ねぎ";
-  taxPrice(price,name);
 }
-onion(150,price)
+
+addTax("トマト", 100, price);
+addTax("玉ねぎ", 150, price);
