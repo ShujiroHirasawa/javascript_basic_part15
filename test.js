@@ -38,9 +38,9 @@ function fruit(name, price) {
 fruit("リンゴ", 100);
 
 //3
-function addTax(price, func) {
+function addTax(name, price, func) {
   const taxPrice = Math.round(price * 1.10);
-  func(price,taxPrice);
+  func(name, taxPrice, price);
 }
 
 function price(name,price){
@@ -48,14 +48,7 @@ function price(name,price){
 }
 
 //トマトの税込み価格をコンソールに表示させる処理
-function tomato(price,taxPrice){
-  const name ="トマト";
-}
+addTax("トマト", 100, price);
 
 //玉ねぎの税込み価格をコンソールに表示させる処理
-function onion(price, taxPrice){
-  const name ="玉ねぎ";
-}
-
-addTax("トマト", 100, price);
 addTax("玉ねぎ", 150, price);
