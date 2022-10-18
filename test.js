@@ -40,15 +40,15 @@ fruit("リンゴ", 100);
 //3
 function addTax(name, price, func) {
   const taxPrice = Math.round(price * 1.10);
-  func(name, taxPrice, price);
+  func(name, taxPrice);
 }
 
-function price(name,price){
+function vegatableprice(name,price){
   console.log(name + "の値段は" + price + "円です。");
 }
 
 //トマトの税込み価格をコンソールに表示させる処理
-addTax("トマト", 100, price);
+addTax("トマト", 100, vegatableprice);
 
 //玉ねぎの税込み価格をコンソールに表示させる処理
-addTax("玉ねぎ", 150, price);
+addTax("玉ねぎ", 150, vegatableprice);
